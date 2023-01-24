@@ -1,0 +1,17 @@
+<p>list works!</p>
+<table>
+    <thead>
+        <th>Producto</th>
+        <th>Costo</th>
+        <th>Imagen</th>
+        <th>Tools</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let prod of ferreteria">
+            <td>{{prod.producto}}</td>
+            <td>{{prod.costo}}</td>
+            <td><img src="{{prod.foto}}" alt=""></td>
+            <td><button (click)="onClickDelete(prod)">Eliminar</button></td>
+        </tr>
+    </tbody>
+</table>

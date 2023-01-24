@@ -1,0 +1,18 @@
+<form [formGroup]="formRegister">
+    <h1>Registra un nuevo producto</h1>
+    <div>
+        <label for="producto">Producto: </label>
+        <input type="text" name="producto" formControlName="producto">
+    </div>
+    <div>
+        <label for="costo">Costo: </label>
+        <input type="text" name="costo" formControlName="costo">
+    </div>
+    <div>
+        <label for="foto">Foto: </label>
+        <input type="text" name="foto" formControlName="foto">
+    </div>
+    <div>
+        <button (click)="onSubmit()">Registrar</button>
+    </div>
+</form>
