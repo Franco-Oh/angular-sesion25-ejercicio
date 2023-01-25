@@ -14,14 +14,16 @@ export class ListComponent implements OnInit {
   constructor(private ferreteriaService:FerreteriaService) { }
 
   ngOnInit(): void {
-    this.ferreteriaService.getFerreteria().subscribe( Ferreteria2 => {
-      this.ferreteria = Ferreteria2;
+    this.ferreteriaService.getFerreteria().subscribe( Ferreteria => {
+      this.ferreteria = Ferreteria;
     })
   }
 
   onClickDelete(ferreteria:Interface){
-    const response = this.ferreteriaService.deleteFerreteria(ferreteria);
-    console.log(response);
+    console.log(ferreteria);
+    console.log("aqui deberia borrarse");
+    const response = this.ferreteriaService.deleteFerreteria(ferreteria)
+    console.log(response)
   }
 
 }

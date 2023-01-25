@@ -8,6 +8,7 @@ import { environment } from '../environments/environment';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { PagesModule } from './pages/pages.module';
 import { ComponentesModule } from './componentes/componentes.module';
+import { provideAuth,getAuth } from '@angular/fire/auth';
 
 var config = {
   apiKey: environment.firebase.apiKey,
@@ -27,7 +28,8 @@ var config = {
     PagesModule,
     ComponentesModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideFirestore(() => getFirestore())
+    provideFirestore(() => getFirestore()),
+    provideAuth(() => getAuth())
   ],
   providers: [],
   bootstrap: [AppComponent]

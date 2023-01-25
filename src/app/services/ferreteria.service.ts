@@ -22,7 +22,7 @@ export class FerreteriaService {
   }
 
   deleteFerreteria(ferreteria:Interface){
-    const ferreteriaRef = doc(this.fireStore, `ferreteria/${ferreteria.id}`);
+    const ferreteriaRef = doc(this.fireStore, `ferreteriaInterface/${ferreteria.id}`);
     return deleteDoc(ferreteriaRef);
   }
 }

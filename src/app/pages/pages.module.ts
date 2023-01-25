@@ -4,6 +4,10 @@ import { ListComponent } from './list/list.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { UserRegisterComponent } from './user-register/user-register.component';
+import { ComponentesModule } from '../componentes/componentes.module';
+import { AppRoutingModule } from  'src/app/app-routing.module';
 
 
 
@@ -11,17 +15,23 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   declarations: [
     ListComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent,
+    UserRegisterComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ComponentesModule,
+    AppRoutingModule
   ],
  exports: [
     ListComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent,
+    UserRegisterComponent
   ]
 })
 export class PagesModule { }
